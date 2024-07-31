@@ -28,6 +28,14 @@ jobs:
         run: terraform init
         working-directory: ./vpc-functions
 
+      - name: 'Terraform Format'
+        run: terraform fmt --check
+        working-directory: ./vpc-functions
+
+      - name: 'Terraform Validate'
+        run: terraform validate
+        working-directory: ./vpc-functions
+
       - name: 'Terraform Plan'
         run: terraform plan
         working-directory: ./vpc-functions
