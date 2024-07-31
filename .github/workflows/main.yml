@@ -18,9 +18,12 @@ jobs:
 
       - name: 'Terraform Init'
         run: terraform init
+        working-directory: ./vpc-functions
 
       - name: 'Terraform Plan'
         run: terraform plan
+        working-directory: ./vpc-functions
 
       - name: 'Terraform Apply'
         run: terraform apply -auto-approve
+        working-directory: ./vpc-functions
