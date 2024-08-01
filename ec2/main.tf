@@ -9,8 +9,8 @@ resource "aws_subnet" "example_subnet" {
 }
 
 resource "aws_instance" "example_instance" {
-  ami                    = var.ami
-  instance_type          = var.instance_type
+  ami                    = "ami-0e872aee57663ae2d"
+  instance_type          = "t2.micro"
   subnet_id              = aws_subnet.example_subnet.id
   vpc_security_group_ids = [aws_security_group.example_sg.id]
 
