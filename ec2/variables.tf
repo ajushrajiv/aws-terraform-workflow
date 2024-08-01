@@ -3,10 +3,3 @@ variable "aws_region" {
   default     = "eu-central-1"
 }
 
-variable "instance_type" {
-  description = "type of the instance"
-}
-
-variable "ami" {
-  description = "ami of the instance"
-}
